@@ -58,5 +58,6 @@ class MongoEngineDocumentField(FieldType):
     def get_object_type(self, schema):
         return get_type_for_document(schema, self.document)
 
+    @property
     def List(self):
         return List(self, *self.args, **self.kwargs)
